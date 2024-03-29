@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Форма</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма регистрации</h1>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td colspan="2"><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Пароль:</label></td>
+                <td colspan="2"><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label>Пол:</label></td>
+                <td><input type="radio" id="male" name="gender" value="male"> <label for="male">Мужчина</label></td>
+                <td><input type="radio" id="female" name="gender" value="female"> <label for="female">Женщина</label></td>
+            </tr>            
+            <tr>
+                <td><label for="birthdate">Дата рождения:</label></td>
+                <td colspan="2"><input type="date" id="birthdate" name="birthdate"></td>
+            </tr>
+            <tr>
+                <td><label>Язык:</label></td>
+                <td colspan="2">
+                    <input type="checkbox" id="english" name="language[]" value="english"> <label for="english">Английский</label>
+                    <input type="checkbox" id="spanish" name="language[]" value="spanish"> <label for="spanish">Испанский</label>
+                    <input type="checkbox" id="chinese" name="language[]" value="chinese"> <label for="chinese">Китайский</label>
+                    <input type="checkbox" id="italian" name="language[]" value="italian"> <label for="italian">Итальянский</label>
+                </td>
+            </tr>            
+            <tr>
+                <td><label for="about_me">Обо мне:</label></td>
+                <td colspan="2"><textarea id="about_me" name="about_me" rows="4" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Готово"></td>
+                <td><input type="reset" value="Очистить"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
